@@ -26,7 +26,7 @@ bool is_listened(int32_t port, int64_t* inode) {
     ++count;
     if (count == 1)
       continue;
-      if (sscanf(line,"%*d:%*d:%x%*d:%*d%*x%*d:%*d%*d:%*d%*d%*d%*d%d", &listen_port, inode) != 0 && port == listen_port)
+      if (sscanf(line,"%*d:%*x:%x%*x:%*x%*x%*x:%*x%*x:%*x%*d%*d%*d%d", &listen_port, inode) != 0 && port == listen_port)
         return true;
   }
   free(line);
