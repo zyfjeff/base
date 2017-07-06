@@ -17,7 +17,8 @@ char* get_program_name(char *buf,int count, pid_t pid)
         return NULL;
     }
     buf[retval] = '\0';
-    //获取指向最后一次出现'/'字符的指针
+    // 获取指向最后一次出现'/'字符的指针
+    // 并没有处理 delete的情况
     char* process_name = strrchr(buf, '/');
     if (process_name) {
       return strrchr(buf,'/') + 1;

@@ -1,7 +1,6 @@
 #ifndef _LOGAGENT_SINGLE_INSTANCE_H_
 #define _LOGAGENT_SINGLE_INSTANCE_H_
 
-#include "utils.h"
 #include <stdio.h>
 #include <unistd.h>
 #include <boost/noncopyable.hpp>
@@ -9,7 +8,7 @@
 namespace logagent {
 
 class SingleInstance : public boost::noncopyable
-{ 
+{
  public:
     SingleInstance(const char* pidfile) {
         fd_ = open(pidfile,O_RDWR|O_TRUNC|O_CREAT|O_EXCL);
@@ -35,7 +34,7 @@ class SingleInstance : public boost::noncopyable
         return fd_;
     }
     //C++11 delegation constructor
-    SingleInstance() : SingleInstance("/var/run/logagent.pid") {}  
+    SingleInstance() : SingleInstance("/var/run/logagent.pid") {}
     ~SingleInstance() {
         //ignore return value
         LockOrUnlock(fd_,false);
