@@ -56,6 +56,10 @@ template<typename T>
 inline void ignore_result(const T&) {
 }
 
+template <typename T>
+inline void ignore_unused(T &&) {
+}
+
 // The following enum should be used only as a constructor argument to indicate
 // that the variable has static storage class, and that the constructor should
 // do nothing to its state.  It indicates to the reader that it is legal to
