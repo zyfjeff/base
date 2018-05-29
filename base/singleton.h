@@ -2,9 +2,10 @@
 // Created by tianqian.zyf on 12/17/16.
 //
 
-#ifndef CODEBASE_SINGLETON_H_H
-#define CODEBASE_SINGLETON_H_H
-#include "macros.h"
+#ifndef BASE_SINGLETON_H_
+#define BASE_SINGLETON_H_
+
+#include "base/macros.h"
 #include <thread>
 
 /*
@@ -46,4 +47,4 @@ T* Singleton<T>::data_ = nullptr;
 template <typename T>
 typename Singleton<T>::SingleGc Singleton<T>::gc_;
 
-#endif //CODEBASE_SINGLETON_H_H
+#endif //BASE_SINGLETON_H_

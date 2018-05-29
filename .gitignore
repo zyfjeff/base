@@ -1,0 +1,6 @@
+bazel-bin
+bazel-base
+bazel-genfiles
+bazel-out
+bazel-testlogs
+.vscode

@@ -1,5 +1,5 @@
-#ifndef _CODEBASE_HASH_H_
-#define _CODEBASE_HASH_H_
+#ifndef BASE_HASH_H_
+#define BASE_HASH_H_
 #include <stdint.h>
 
 // from code.google.com/p/smhasher/wiki/MurmurHash3
@@ -41,4 +41,4 @@ inline uint64_t deavalanche(uint64_t h) {
 }
 
 
-#endif // end of _CODEBASE_HASH_H_
+#endif // BASE_HASH_H_

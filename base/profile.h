@@ -1,5 +1,5 @@
-#ifndef __LIB_PROFILER_H_
-#define __LIB_PROFILER_H_
+#ifndef BASE_PROFILER_H_
+#define BASE_PROFILER_H_
 
 #include <thread>
 #include <stdint.h>
@@ -68,5 +68,5 @@ class APIProfiler {
 
 #endif
 
-#endif  //end __LIB_PROFILER_H_
+#endif  // BASE_PROFILER_H_
 
